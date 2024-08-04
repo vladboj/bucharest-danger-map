@@ -1,0 +1,74 @@
+body {
+  background-color: #000000;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#no-data {
+  color: #ededed;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#saved-list {
+  width: 60%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.saved-item {
+  width: 100%;
+  min-height: 12%;
+  max-height: 12%;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.2rem;
+  border-radius: 0.7rem;
+}
+
+.address {
+  padding: 0.5rem 0;
+  flex: 7;
+  justify-self: flex-start;
+}
+
+.danger-level {
+  background-color: attr(data-danger-level);
+  height: 50%;
+  border-radius: 2rem;
+  flex: 2;
+  justify-self: center;
+}
+
+.trash-icon-container {
+  flex: 1;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-trash {
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.fa-trash:hover {
+  color: #cc0000;
+}
+
+.fa-trash:active {
+  color: #8f0000;
+}

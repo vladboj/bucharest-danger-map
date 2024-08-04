@@ -1,0 +1,33 @@
+#flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+hr {
+  width: 100%;
+  border-color: #ededed;
+  border-style: none;
+  border-top-style: solid;
+  border-top-width: 0.1rem;
+}
+
+p {
+  color: #ededed;
+  font-size: larger;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

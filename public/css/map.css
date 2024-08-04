@@ -1,0 +1,304 @@
+/* Map */
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Danger Info */
+
+#danger-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 35%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 1px #737373;
+  border-bottom-right-radius: 1rem;
+  display: none;
+}
+
+#danger-info.expanded {
+  display: flex;
+  flex-direction: column;
+}
+
+#xmark {
+  align-self: flex-end;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.fa-xmark {
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.fa-xmark:hover {
+  color: #cc0000;
+}
+
+.fa-xmark:active {
+  color: #8f0000;
+}
+
+#bookmark {
+  justify-self: flex-end;
+  margin-bottom: 10%;
+}
+
+.fa-bookmark {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.fa-bookmark.hidden {
+  display: none;
+}
+
+#address {
+  font-size: 1.5rem;
+  align-self: center;
+  text-align: center;
+  text-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+#danger-level {
+  width: 40%;
+  height: 15%;
+  align-self: center;
+  border-radius: 2rem;
+  text-align: center;
+  padding-top: 0.7rem;
+}
+
+/* Searchbox */
+
+#searchbox-container {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0 7px 1px #737373;
+}
+
+#searchbox,
+#searchbox-input,
+#searchbox-input-options {
+  background-color: #ffffff;
+  font-size: 1.2rem;
+}
+
+#searchbox,
+#searchbox-input-options,
+#searchbox-input-options > .searchbox-input-option:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+#searchbox,
+#searchbox-input-options {
+  width: 100%;
+  border-style: none;
+  outline: none;
+}
+
+#searchbox {
+  display: flex;
+  height: 5.5vh;
+}
+
+#searchbox.expanded {
+  border-radius: 0;
+  border-bottom: none;
+}
+
+#searchbox-input {
+  flex: 9;
+  border-style: none;
+  outline: none;
+  margin-right: 5%;
+}
+
+#magnifying-glass {
+  flex: 1;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbox-input-options {
+  display: none;
+  border-top: none;
+}
+
+#searchbox-input-options.expanded {
+  display: block;
+}
+
+#searchbox-input-options > hr {
+  border-color: #a6a6a6;
+  border-style: none;
+  border-top-style: solid;
+  border-top-width: 0.1rem;
+}
+
+.searchbox-input-option {
+  padding: 1vh 2vw;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.searchbox-input-option:hover {
+  background-color: #d2d2d2;
+}
+
+.searchbox-input-option:active {
+  background-color: #ababab;
+}
+
+/* Menu */
+
+#menu-trigger {
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  top: 1.5%;
+  right: 1%;
+  z-index: 1000;
+  background-color: #684300;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #737373;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#menu {
+  width: 10%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 8%;
+  right: 1%;
+  z-index: 1000;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 5px #737373;
+  display: none;
+}
+
+#menu.expanded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-option {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.7rem 0 0.7rem 0.7rem;
+}
+
+#menu-options > a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  transition: background-color 150ms ease-in-out;
+}
+
+#menu-options > a:hover {
+  background-color: #d2d2d2;
+}
+
+#menu-options > a:active {
+  background-color: #ababab;
+}
+
+#menu-options a:first-child {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+#menu-options a:last-child {
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+#menu-options > hr {
+  width: 100%;
+  align-self: center;
+  border-color: #a6a6a6;
+  border-style: none;
+  border-top-style: solid;
+  border-top-width: 0.1rem;
+}
+
+/* Danger Legend */
+
+#danger-legend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 16%;
+  height: 13%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  border-top-right-radius: 7px;
+}
+
+#danger-legend-title {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+#green-red-spectrum {
+  width: 100%;
+  height: 100%;
+}
+
+.danger-legend-child {
+  height: 25%;
+  width: 80%;
+}
+
+.danger-legend-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.danger-legend-child:nth-of-type(3) {
+  gap: 60%;
+}
+
+#high-danger,
+#low-danger {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
