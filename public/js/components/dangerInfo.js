@@ -61,3 +61,34 @@ export function attachChannelHandler() {
         }
     };
 }
+
+let touchstartY = 0;
+let touchendY = 0;
+export function attachSwipeHandler() {
+    const dangerInfo = document.getElementById("danger-info");
+
+    dangerInfo.addEventListener('touchstart', handleTouchStart);
+    dangerInfo.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchStart(event) {
+    touchstartY = event.changedTouches[0].screenY;
+}
+
+function handleTouchEnd(event) {
+    touchendY = event.changedTouches[0].screenY;
+    handleSwipe();
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    if (Math.abs(touchendY - touchstartY) > swipeThreshold) {
+        const dangerInfo = document.getElementById("danger-info");
+        if (touchendY > touchstartY) {
+            dangerInfo.classList.add("hidden");
+        }
+        else {
+            dangerInfo.classList.remove("hidden");
+        }
+    }
+}

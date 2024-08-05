@@ -106,7 +106,7 @@
 #searchbox,
 #searchbox-input-options {
   width: 100%;
-  border-style: none;
+  border: none;
   outline: none;
 }
 
@@ -117,14 +117,14 @@
 
 #searchbox.expanded {
   border-radius: 0;
-  border-bottom: none;
 }
 
 #searchbox-input {
   flex: 9;
-  border-style: none;
+  border: none;
   outline: none;
   margin-right: 5%;
+  border-radius: 0 2rem 2rem 0;
 }
 
 #magnifying-glass {
@@ -139,7 +139,7 @@
 
 #searchbox-input-options {
   display: none;
-  border-top: none;
+  border: none;
 }
 
 #searchbox-input-options.expanded {
@@ -170,8 +170,8 @@
 /* Menu */
 
 #menu-trigger {
-  width: 5vh;
-  height: 5vh;
+  width: 3vw;
+  height: 3vw;
   position: absolute;
   top: 1.5%;
   right: 1%;
@@ -301,4 +301,89 @@
 #low-danger {
   font-size: 1.1rem;
   color: #ffffff;
+}
+
+/* FOR PHONES */
+
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  /* Danger Info */
+
+  #danger-info {
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 40%;
+    transition: transform 200ms ease-in-out;
+  }
+
+  #danger-info::before {
+    content: "";
+    display: block;
+    width: 20vw;
+    height: 0.7vh;
+    background-color: #979797;
+    border-radius: 0.2rem;
+    margin: 1vh auto 5vh;
+  }
+
+  #danger-info.hidden {
+    transform: translateY(90%);
+  }
+
+  #xmark {
+    display: none;
+  }
+
+  /* Searchbox */
+
+  #searchbox-container {
+    top: 2%;
+    left: 2%;
+    transform: translateX(0);
+    width: 83%;
+    border-radius: 2rem;
+  }
+
+  #searchbox,
+  #searchbox-input-options,
+  #searchbox-input-options > .searchbox-input-option:last-child {
+    border-radius: 2rem;
+  }
+
+  #searchbox {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  #searchbox.expanded {
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  #searchbox-input-options {
+    border-radius: 0 0 2rem 2rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Menu */
+
+  #menu-trigger {
+    width: 5.5vh;
+    height: 5.5vh;
+    top: 2%;
+    right: 2%;
+  }
+
+  #menu {
+    width: 40%;
+    top: 9%;
+    right: 3%;
+  }
+
+  /* Danger Legend */
+
+  #danger-legend {
+    display: none;
+  }
 }

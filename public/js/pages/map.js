@@ -13,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
     DangerInfo.attachXmarkClickHandler();
     DangerInfo.attachBookmarkClickHandler();
     DangerInfo.attachChannelHandler();
+    DangerInfo.attachSwipeHandler();
 });
