@@ -117,6 +117,9 @@ async function displayDangerInfo(address, dangerLevel) {
     if (!dangerInfo.classList.contains("expanded")) {
         dangerInfo.classList.toggle("expanded");
     }
+
+    // For mobile, swipe up the danger info if it is hidden
+    dangerInfo.classList.remove("hidden");
 }
 
 export function attachSearchHandler(map) {
