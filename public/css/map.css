@@ -306,6 +306,10 @@
 /* FOR PHONES */
 
 @media screen and (min-width: 320px) and (max-width: 430px) {
+  body {
+    overflow-y: hidden;
+  }
+
   /* Danger Info */
 
   #danger-info {
