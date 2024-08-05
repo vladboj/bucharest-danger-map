@@ -323,6 +323,7 @@
   }
 
   #danger-info {
+    touch-action: none;
     position: fixed;
     top: auto;
     left: 0;
