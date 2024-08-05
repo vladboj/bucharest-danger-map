@@ -321,15 +321,19 @@
   #danger-info::before {
     content: "";
     display: block;
-    width: 3rem;
-    height: 0.3rem;
+    width: 20vw;
+    height: 0.7vh;
     background-color: #979797;
     border-radius: 0.2rem;
-    margin: 0.4rem auto;
+    margin: 1vh auto 5vh;
   }
 
   #danger-info.hidden {
     transform: translateY(90%);
+  }
+
+  #xmark {
+    display: none;
   }
 
   /* Searchbox */
