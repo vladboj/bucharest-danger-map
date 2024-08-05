@@ -1,13 +1,14 @@
 #flex-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5vh;
 }
 
 hr {
-  width: 100%;
+  width: 20vw;
   border-color: #ededed;
   border-style: none;
   border-top-style: solid;
@@ -29,5 +30,11 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2vh;
+}
+
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  hr {
+    width: 60vw;
+  }
 }

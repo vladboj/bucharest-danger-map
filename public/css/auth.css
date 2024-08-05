@@ -27,6 +27,7 @@ body {
 }
 
 #error-message {
+  text-align: center;
   color: #000000;
   font-size: larger;
   font-weight: bold;
@@ -37,8 +38,9 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3vh;
   height: 100%;
+  width: 100%;
 }
 
 input,
@@ -57,13 +59,14 @@ input::placeholder {
 
 input {
   border-radius: 1rem;
+  width: 20vw;
 }
 
 button {
   border-radius: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 2vh;
   font-weight: bold;
-  min-width: 10rem;
+  min-width: 10vw;
   cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }
@@ -74,4 +77,22 @@ button:hover {
 
 button:active {
   background-color: #8d8d8d;
+}
+
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  #error-container {
+    width: 50%;
+  }
+
+  #error-message {
+    padding: 0 2vw;
+  }
+
+  input {
+    width: 60vw;
+  }
+
+  button {
+    min-width: 40vw;
+  }
 }
