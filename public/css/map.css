@@ -69,6 +69,7 @@
   text-align: center;
   text-wrap: wrap;
   margin-bottom: 10%;
+  padding: 0 2vw;
 }
 
 #danger-level {
@@ -352,6 +353,7 @@
 
   #address {
     font-size: 1.2rem;
+    padding: 0 7vw;
   }
 
   #danger-level {
