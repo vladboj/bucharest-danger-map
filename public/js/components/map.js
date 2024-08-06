@@ -1,14 +1,18 @@
 import * as Constants from "../dangerLevel/constants.js";
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 function createMap() {
+    const initialZoom = isMobile ? 11 : 12;
     return L
         .map('map', { zoomControl: false })
-        .setView([Constants.CENTER.lat, Constants.CENTER.lng], 12);
+        .setView([Constants.CENTER.lat, Constants.CENTER.lng], initialZoom);
 }
 
 function addTileLayer(map) {
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
+        detectRetina: isMobile ? true : false,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 }
