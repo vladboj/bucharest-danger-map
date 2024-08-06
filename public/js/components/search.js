@@ -131,3 +131,12 @@ export function attachSearchHandler(map) {
         }
     });
 }
+
+export function attachXmarkClickHandler() {
+    // Add event listener for xmark to clear input's text
+    const xmark = document.querySelector("#searchbox .fa-xmark");
+    xmark.addEventListener("click", () => {
+        const searchboxInput = document.getElementById("searchbox-input");
+        searchboxInput.value = "";
+    });
+}

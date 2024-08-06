@@ -4,7 +4,7 @@ const locationDeletionChannel = new BroadcastChannel('locationDeletionChannel');
 
 export function attachXmarkClickHandler() {
     // Add event listener for xmark to hide the danger info div
-    const xmark = document.querySelector(".fa-xmark");
+    const xmark = document.querySelector("#danger-info .fa-xmark");
     xmark.addEventListener("click", () => {
         const dangerInfo = document.getElementById("danger-info");
         dangerInfo.classList.toggle("expanded");

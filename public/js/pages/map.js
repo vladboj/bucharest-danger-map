@@ -7,6 +7,7 @@ import * as DangerInfo from "../components/dangerInfo.js";
 document.addEventListener("DOMContentLoaded", () => {
     const map = Map.initMap();
     Search.attachSearchHandler(map);
+    Search.attachXmarkClickHandler();
     Menu.attachToggleMenuHandler();
     Menu.attachLogoutHandler();
     attachMapClickOutsideHandler();

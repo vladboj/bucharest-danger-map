@@ -1,3 +1,9 @@
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Map */
 
 #map {
@@ -24,36 +30,36 @@
   flex-direction: column;
 }
 
-#xmark {
+#danger-info .xmark {
   align-self: flex-end;
   padding: 0.5rem 0.5rem 0 0;
 }
 
-.fa-xmark {
+#danger-info .fa-xmark {
   font-size: 1.7rem;
   cursor: pointer;
   transition: color 150ms ease-in-out;
 }
 
-.fa-xmark:hover {
+#danger-info .fa-xmark:hover {
   color: #cc0000;
 }
 
-.fa-xmark:active {
+#danger-info .fa-xmark:active {
   color: #8f0000;
 }
 
-#bookmark {
+#danger-info .bookmark {
   justify-self: flex-end;
   margin-bottom: 10%;
 }
 
-.fa-bookmark {
+#danger-info .fa-bookmark {
   font-size: 1.7rem;
   cursor: pointer;
 }
 
-.fa-bookmark.hidden {
+#danger-info .fa-bookmark.hidden {
   display: none;
 }
 
@@ -112,6 +118,8 @@
 
 #searchbox {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 5.5vh;
 }
 
@@ -120,21 +128,22 @@
 }
 
 #searchbox-input {
-  flex: 9;
+  flex: 8;
   border: none;
   outline: none;
-  margin-right: 5%;
-  border-radius: 0 2rem 2rem 0;
 }
 
-#magnifying-glass {
+#searchbox .icon-container {
   flex: 1;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#searchbox .magnifying-glass {
+  margin-left: 0.3vw;
+}
+
+#searchbox .xmark {
+  cursor: pointer;
+  margin-right: 0.3vw;
 }
 
 #searchbox-input-options {
@@ -146,7 +155,7 @@
   display: block;
 }
 
-#searchbox-input-options > hr {
+#searchbox-input-options hr {
   border-color: #a6a6a6;
   border-style: none;
   border-top-style: solid;
@@ -170,8 +179,8 @@
 /* Menu */
 
 #menu-trigger {
-  width: 3vw;
-  height: 3vw;
+  height: 5.5vh;
+  aspect-ratio: 1 / 1;
   position: absolute;
   top: 1.5%;
   right: 1%;
@@ -337,7 +346,7 @@
     transform: translateY(calc(100% - 6vh));
   }
 
-  #xmark {
+  #danger-info .xmark {
     display: none;
   }
 
@@ -355,35 +364,32 @@
     top: 2%;
     left: 2%;
     transform: translateX(0);
-    width: 83%;
-    border-radius: 2rem;
+    width: calc(100% - 5.5vh - 6%);
+    border-radius: 1rem;
   }
 
   #searchbox,
   #searchbox-input-options,
   #searchbox-input-options > .searchbox-input-option:last-child {
-    border-radius: 2rem;
-  }
-
-  #searchbox {
-    gap: 0.5rem;
-    padding: 0 0.5rem;
+    border-radius: 1rem;
   }
 
   #searchbox.expanded {
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  #searchbox-input {
+    max-width: 78%;
   }
 
   #searchbox-input-options {
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
     padding: 0 0.5rem;
   }
 
   /* Menu */
 
   #menu-trigger {
-    width: 5.5vh;
-    height: 5.5vh;
     top: 2%;
     right: 2%;
   }
