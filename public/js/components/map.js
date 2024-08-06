@@ -1,9 +1,12 @@
 import * as Constants from "../dangerLevel/constants.js";
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 function createMap() {
+    const initialZoom = isMobile ? 11 : 12;
     return L
         .map('map', { zoomControl: false })
-        .setView([Constants.CENTER.lat, Constants.CENTER.lng], 12);
+        .setView([Constants.CENTER.lat, Constants.CENTER.lng], initialZoom);
 }
 
 function addTileLayer(map) {
