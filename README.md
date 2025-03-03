@@ -4,7 +4,7 @@ I came across a heat map of the danger levels in Bucharest in some news article,
 
 ## Usage ##
 
-- The app can be accessed [here](https://bucharest-danger-map.vercel.app/)
+- For now, I've removed the deployment
 
 ## What you can do ##
 
