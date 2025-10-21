@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Bucharest Danger Map",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

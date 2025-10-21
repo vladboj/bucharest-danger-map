@@ -1,0 +1,20 @@
+meta {
+  name: Get Danger Level
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/danger?lat=44.4488383&lon=26.0887623
+  body: none
+  auth: inherit
+}
+
+params:query {
+  lat: 44.4488383
+  lon: 26.0887623
+}
+
+settings {
+  encodeUrl: true
+}

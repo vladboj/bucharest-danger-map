@@ -1,0 +1,20 @@
+meta {
+  name: Proxy Search
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/geocode?street=Calea%20Victoriei&limit=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  street: Calea%20Victoriei
+  limit: 5
+}
+
+settings {
+  encodeUrl: true
+}

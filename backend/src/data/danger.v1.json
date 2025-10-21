@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "width": 1163,
+  "height": 1285,
+  "dtype": "uint8",
+  "nodata": 255,
+  "affine": {
+    "a": 4484.3422812338,
+    "b": -85.5065120032,
+    "c": -112641.7393479442,
+    "d": -59.507599545,
+    "e": -6262.3577672058,
+    "f": 280482.3327764552
+  },
+  "crs": "EPSG:4326",
+  "origin": "top-left",
+  "yAxis": "down",
+  "scale": {
+    "type": "linear",
+    "min": 0,
+    "max": 254
+  },
+  "buckets": [
+    { "label": "Very Safe", "max": 0.2, "color": "#16a34a" },
+    { "label": "Safe", "max": 0.4, "color": "#22c55e" },
+    { "label": "Moderate", "max": 0.6, "color": "#eab308" },
+    { "label": "Risky", "max": 0.8, "color": "#f97316" },
+    { "label": "Very Risky", "max": 1.0, "color": "#ef4444" }
+  ],
+  "source": "bucharest_danger_heatmap.v1.png"
+}
